@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 95 43% 96%;
+    --foreground: 240 10% 3.9%;
+    --card: 95 43% 98%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 95 43% 98%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 119 29% 32%;
+    --primary-foreground: 95 43% 98%;
+    --secondary: 95 20% 92%;
+    --secondary-foreground: 119 29% 20%;
+    --muted: 95 20% 92%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 95 20% 92%;
+    --accent-foreground: 119 29% 20%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 95 15% 85%;
+    --input: 95 15% 88%;
+    --ring: 119 29% 32%;
+    --chart-1: 119 29% 45%;
+    --chart-2: 95 35% 65%;
+    --chart-3: 119 15% 75%;
+    --chart-4: 95 25% 55%;
+    --chart-5: 119 20% 40%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 119 25% 8%;
+    --foreground: 95 43% 96%;
+    --card: 119 25% 10%;
+    --card-foreground: 95 43% 96%;
+    --popover: 119 25% 10%;
+    --popover-foreground: 95 43% 96%;
+    --primary: 119 29% 45%;
+    --primary-foreground: 119 25% 8%;
+    --secondary: 119 15% 15%;
+    --secondary-foreground: 95 43% 96%;
+    --muted: 119 15% 15%;
+    --muted-foreground: 95 20% 65%;
+    --accent: 119 15% 15%;
+    --accent-foreground: 95 43% 96%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 95 43% 96%;
+    --border: 119 15% 20%;
+    --input: 119 15% 20%;
+    --ring: 119 29% 45%;
+    --chart-1: 119 29% 55%;
+    --chart-2: 95 35% 45%;
+    --chart-3: 119 15% 35%;
+    --chart-4: 95 25% 45%;
+    --chart-5: 119 20% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.8);
+}
+
+/* Dark mode improvements */
+.dark iframe {
+  filter: brightness(0.9);
+}
