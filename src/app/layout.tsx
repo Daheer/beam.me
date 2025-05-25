@@ -14,11 +14,11 @@ export const metadata: Metadata = {
   keywords: "networking, professional, career, connections, business",
   authors: [{ name: "Beam Team" }],
   creator: "Beam",
-  metadataBase: new URL("https://beam.me"),
+  metadataBase: new URL("https://just-beam.me"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://beam.me",
+    url: "http://just-beam.me",
     title: "Beam - Professional Networking Made Simple",
     description: "Show up, get noticed. Share your skills. Talk to the right people. No noise. Just networking.",
     siteName: "Beam",

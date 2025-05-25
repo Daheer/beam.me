@@ -12,7 +12,7 @@ export async function sendWelcomeEmail({ email }: WelcomeEmailProps) {
   
   try {
     const { data, error } = await resend.emails.send({
-      from: 'Beam Team <onboarding@resend.dev>',
+      from: 'Beam Team <contact@just-beam.me>',
       to: [email],
       subject: 'You\'re in. Beam is coming.',
       html: `
@@ -287,7 +287,7 @@ export async function sendWelcomeEmail({ email }: WelcomeEmailProps) {
               <div class="signature">
                 <div class="signature-text">Talk soon,</div>
                 <div class="team-name">Beam Team</div>
-                <a href="https://beam.me" class="website">beam.me</a>
+                <a href="https://just-beam.me" class="website">just-beam.me</a>
               </div>
             </div>
             
@@ -305,11 +305,11 @@ You're on the list.
 Beam is for people who want to connect — fast, nearby, and without the fluff. When we launch, you'll be one of the first to get access.
 
 Want early beta access?
-Email us: suhayrid6@gmail.com
+Email us: contact@just-beam.me
 
 Talk soon,
 – Beam Team
-beam.me`
+just-beam.me`
     });
 
     if (error) {
