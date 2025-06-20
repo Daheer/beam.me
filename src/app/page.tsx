@@ -9,6 +9,7 @@ import { DarkModeToggle } from "@/components/dark-mode-toggle";
 import { FloatingDarkModeToggle } from "@/components/floating-dark-mode-toggle";
 import Iphone15Pro from "@/components/magicui/iphone-15-pro";
 import { HowItWorksTimeline } from "@/components/how-it-works-timeline";
+import { Typewriter } from 'react-simple-typewriter';
 import {
   Zap,
   Users,
@@ -21,6 +22,43 @@ import {
   MapPin,
 } from "lucide-react";
 import Image from "next/image";
+
+// Rotating Typewriter Questions Component
+function RotatingTypewriterQuestions() {
+  const questions = [
+    "Ever wondered if another 100x engineer is in the same city as you?",
+    "Ever been to a tech event and left with zero connections?",
+    "Traveled to a new city — and didn’t meet a single person in tech?",
+    "What if your co-founder is in that same airport or coffee shop?",
+    "Tired of the LinkedIn noise? and wish tech networking was more natural?"
+  ];
+
+  return (
+    <div className="space-y-8">
+      <div className="h-32 sm:h-40 flex items-center">
+        <div className="w-full max-w-2xl">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
+            <Typewriter
+              words={questions}
+              loop={true}
+              cursor
+              cursorStyle='|'
+              typeSpeed={30}
+              deleteSpeed={20}
+              delaySpeed={2000}
+              cursorBlinking={true}
+            />
+          </h1>
+        </div>
+      </div>
+      <div className="h-8 sm:h-10 flex items-center">
+        <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
+          Beam fixes all that by connecting you with real tech people near you — no DMs, no noise, just real conversations.
+        </p>
+      </div>
+    </div>
+  );
+}
 
 export default function LandingPage() {
   const [email, setEmail] = useState("");
@@ -120,15 +158,7 @@ export default function LandingPage() {
               </Badge>
 
               <div className="space-y-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                  Show Up,
-                  <br />
-                  <span className="text-primary">Get Noticed.</span>
-                </h1>
-
-                <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
-                  Share your skills. Talk to the right people. No noise. Just networking.
-                </p>
+                <RotatingTypewriterQuestions />
               </div>
             </div>
 
@@ -387,8 +417,7 @@ export default function LandingPage() {
               Ready to <span className="text-white/40">Beam</span>?
             </h2>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-              Start meeting the right people — nearby and now.
-              Join Beam early.
+              Connections hide in plain sight. Beam brings them to light.
             </p>
             <Button
               size="lg"
@@ -400,7 +429,7 @@ export default function LandingPage() {
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              Start Your Journey
+              Join Beam Early
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </CardContent>
