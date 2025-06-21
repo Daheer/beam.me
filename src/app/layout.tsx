@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   keywords: "networking, professional, career, connections, business",
   authors: [{ name: "Beam Team" }],
   creator: "Beam",
-  metadataBase: new URL("https://just-beam.me"),
+  metadataBase: new URL("http://just-beam.me"),
   openGraph: {
     type: "website",
     locale: "en_US",
